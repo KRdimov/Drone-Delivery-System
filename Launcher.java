@@ -12,7 +12,7 @@ public class Launcher {
 
 	private static void runSystem() {
 		System.out.println("Your request is:");
-		String request = "4 2016-10-25 12:31 420,369 23 5 54 20"; //scanner.nextLine();
+		String request = "4 2016-10-25 12:31 420,369 3 2 4 4"; //scanner.nextLine();
 		System.out.println(request);
 		Map<Integer, Integer> productsQuantities = parseRequest(request);
 		RequestManager rm = new RequestManager();
