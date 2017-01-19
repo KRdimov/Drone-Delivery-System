@@ -1,4 +1,4 @@
-package DroneDeliverySystem;
+package drone_delivery_system;
 
 import java.util.HashMap;
 import java.util.Map;
