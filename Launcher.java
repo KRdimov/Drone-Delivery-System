@@ -14,10 +14,12 @@ public class Launcher {
 		System.out.println("Your request is:");
 		String request = "4 2016-10-25 12:31 420,369 23 5 54 20"; //scanner.nextLine();
 		System.out.println(request);
-		parseRequest(request);
+		Map<Integer, Integer> productsQuantities = parseRequest(request);
+		RequestManager rm = new RequestManager();
+		rm.handleDeliveryRequest(productsQuantities);
 	}
 
-	private static void parseRequest(String req) {
+	private static Map<Integer, Integer> parseRequest(String req) {
 		String[] splitRequest=req.split(",");
 		String[] splitProduct= splitRequest[1].split(" ");
 		int[] extractProduct = new int[splitProduct.length-1]; 
@@ -42,6 +44,6 @@ public class Launcher {
 			System.out.print("Product number:" + key);
 			System.out.println(" Quantity:"+map.get(key));
 		}
-		
+		return map;
 	}
 }
