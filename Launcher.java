@@ -18,6 +18,11 @@ public class Launcher {
 		RequestManager rm = new RequestManager();
 		rm.handleDeliveryRequest(productsQuantities);
 	}
+	
+	private static Supply parseSupplyRequest(String request) {
+		//TODO
+		return null;
+	}
 
 	private static Map<Integer, Integer> parseRequest(String req) {
 		String[] splitRequest=req.split(",");
